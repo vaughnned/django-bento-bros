@@ -18,7 +18,7 @@
       {% block content %} {% for item in menu %}
       <li>
         <h3>
-          <a href="http://127.0.0.1:8000/item/"
+          <a href="http://127.0.0.1:8000/item/{{ forloop.counter0 }}"
             >{{ item.name }} {{ item.price }}</a
           >
         </h3>

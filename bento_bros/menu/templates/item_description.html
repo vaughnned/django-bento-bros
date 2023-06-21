@@ -11,7 +11,8 @@
       <ul>
         {% block content %}
         <li>
-          <h3>{{ menu.name }} {{ menu.price }}</h3>
+          <h3>{{ item.name }} {{ item.price }}</h3>
+          <p>{{ item.description}}</p>
         </li>
         {% endblock %}
       </ul>

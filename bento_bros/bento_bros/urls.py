@@ -18,8 +18,9 @@ from django.contrib import admin
 from django.urls import path
 from menu.views import home_page, item
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', home_page),
-    path('item/', item),
+    path('item/<int:index>', item),
 ]

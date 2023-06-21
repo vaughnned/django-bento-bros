@@ -116,18 +116,11 @@ menu = [
     }
 ]
 
-index = 0
-
-for index, item in enumerate(menu):
-    index = index
-
-    print(index)
-
 
 def home_page(request):
     return render(request, "home_page.html", {'menu': menu})
 
 
-def item(request):
-    print(request)
-    return render(request, 'item_description.html', {'menu': menu[index]})
+def item(request, index):
+    item = menu[index]
+    return render(request, 'item_description.html', {'item': item})
